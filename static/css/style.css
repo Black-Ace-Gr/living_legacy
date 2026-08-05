@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#07121E;
+    color:white;
+
+    font-family:"Poppins", sans-serif;
+
+    overflow:hidden;
+
+}
+
+
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(243,201,105,0.15),
+        transparent 35%
+    ),
+    #07121E;
+
+}
+
+
+
+.content{
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+
+
+h1{
+
+    font-family:
+    "Cormorant Garamond",
+    serif;
+
+    font-size:clamp(3rem,7vw,6rem);
+
+    font-weight:300;
+
+    letter-spacing:8px;
+
+}
+
+
+
+#subtitle{
+
+    margin-top:25px;
+
+    font-size:1.2rem;
+
+    color:#fdfbf6;
+
+    opacity:0;
+
+}
+
+
+
+button{
+
+
+    margin-top:50px;
+
+    padding:15px 45px;
+
+    border-radius:40px;
+
+    border:1px solid #F3C969;
+
+    background:transparent;
+
+    color:#F3C969;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+
+
+button:hover{
+
+    background:#F3C969;
+
+    color:#07121E;
+
+}
+
+
+
+.stars{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+
+background-image:
+radial-gradient(
+white 1px,
+transparent 1px
+);
+
+background-size:
+70px 70px;
+
+
+opacity:.4;
+
+
+animation:
+moveStars 80s linear infinite;
+
+}
+
+
+
+@keyframes moveStars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-500px);
+}
+
+}
+.opening-text{
+
+    position:absolute;
+
+    top:35%;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+#opening{
+
+    font-family:
+    "Cormorant Garamond",
+    serif;
+
+    font-size:2rem;
+
+    font-style:italic;
+
+    opacity:0;
+
+    color:#fdfbf6;
+
+    transition:2s;
+
+}
+.prologue{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+background:
+
+linear-gradient(
+
+to bottom,
+
+rgba(7,18,30,.2),
+
+rgba(7,18,30,.9)
+
+),
+
+url("../images/prologue/sunrise.jpg");
+
+
+background-size:cover;
+
+background-position:center;
+
+
+opacity:0;
+
+transition:2s;
+
+}
+
+
+
+.prologue-overlay{
+
+text-align:center;
+
+color:white;
+
+}
+
+
+.chapter-text{
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:2rem;
+
+font-style:italic;
+
+opacity:0;
+
+margin:20px;
+
+}
+
+
+
+.prologue h2{
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:4rem;
+
+font-weight:300;
+
+opacity:0;
+
+}
+
+
+
+.location{
+
+margin-top:80px;
+
+opacity:0;
+
+}
+
+
+
+.location span{
+
+display:block;
+
+font-size:3rem;
+
+letter-spacing:10px;
+
+}
+
+
+
+.location small{
+
+font-size:1.5rem;
+
+color:#F3C969;
+
+}
