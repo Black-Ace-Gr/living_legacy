@@ -1,0 +1,72 @@
+<section class="family-voices">
+
+    <div class="family-voices-header">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            Their Voices
+        </span>
+
+        <h3 data-reveal>
+            Four lives.
+            One mother.
+        </h3>
+
+        <p data-reveal>
+            Each of us carries a different piece of her story.
+        </p>
+
+    </div>
+
+
+    <div class="family-voices-grid">
+
+        {% for member in chapter.family_members %}
+
+            <article
+                class="family-voice-card"
+                data-member="{{ member.id }}"
+                data-reveal
+            >
+
+                <div class="family-voice-image">
+
+                    <img
+                        src="{% static member.image %}"
+                        alt="{{ member.name }}"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="family-voice-info">
+
+                    <span>
+                        {{ member.role }}
+                    </span>
+
+                    <h4>
+                        {{ member.name }}
+                    </h4>
+
+                    <button
+                        type="button"
+                        class="open-letter"
+                        data-member="{{ member.id }}"
+                    >
+                        Read their letter
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>

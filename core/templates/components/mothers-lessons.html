@@ -1,0 +1,42 @@
+<section class="mothers-lessons">
+
+    <div class="lessons-header">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            What She Taught Me
+        </span>
+
+        <h3 data-reveal>
+            Her voice became part of mine.
+        </h3>
+
+    </div>
+
+
+    <div class="lesson-list">
+
+        {% for lesson in chapter.lessons %}
+
+            <div
+                class="lesson"
+                data-reveal
+            >
+
+                <span>
+                    {{ forloop.counter|stringformat:"02d" }}
+                </span>
+
+                <p>
+                    {{ lesson }}
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>

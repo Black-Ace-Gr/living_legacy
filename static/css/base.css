@@ -1,0 +1,166 @@
+:root {
+
+    --midnight: #07121e;
+    --gold: #d4af37;
+    --cream: #f8f5f0;
+    --brown: #6b4f3a;
+    --green: #4f6f52;
+    --muted: #8a8a8a;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--midnight);
+
+    color: var(--cream);
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+::selection {
+
+    background: var(--gold);
+
+    color: var(--midnight);
+
+}
+
+
+.gratitude-wall {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 120px 8%;
+
+    background:
+        #050d15;
+
+}
+
+
+.gratitude-inner {
+
+    width: min(750px, 100%);
+
+    text-align: center;
+
+}
+
+
+.gratitude-inner h3 {
+
+    margin-top: 25px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(3rem, 8vw, 6rem);
+
+    color: var(--gold);
+
+}
+
+
+.gratitude-inner > p {
+
+    margin-top: 40px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.5rem;
+
+    line-height: 1.7;
+
+    color:
+        rgba(248, 245, 240, 0.65);
+
+}
+
+
+.gratitude-lines {
+
+    margin: 80px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+
+.gratitude-lines span {
+
+    display: block;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 15px
+        rgba(212, 175, 55, 0.5);
+
+}
+
+
+.gratitude-inner small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+}

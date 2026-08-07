@@ -1,0 +1,239 @@
+<div class="chapter-transition">
+
+    <span></span>
+
+    <p>
+        {{ chapter.eyebrow }}
+    </p>
+
+    <span></span>
+
+</div>
+
+<section
+    class="story-chapter"
+    id="chapter-{{ chapter.id }}"
+    data-chapter="{{ chapter.id }}"
+>
+
+    <div class="chapter-inner">
+
+
+        {% if chapter.eyebrow %}
+
+            <span class="chapter-eyebrow">
+                {{ chapter.eyebrow }}
+            </span>
+
+        {% endif %}
+
+
+        {% if chapter.title %}
+
+            <h2 class="chapter-title">
+                {{ chapter.title }}
+            </h2>
+
+        {% endif %}
+
+
+        {% if chapter.location %}
+
+            <p class="chapter-location">
+                {{ chapter.location }}
+            </p>
+
+        {% endif %}
+
+
+        <div class="chapter-narration">
+
+            {% for paragraph in chapter.narration %}
+
+                <p
+                    class="chapter-paragraph"
+                    data-reveal
+                >
+                    {{ paragraph }}
+                </p>
+
+            {% endfor %}
+
+        </div>
+        {% if chapter.id == "the-house-they-built" %}
+
+        {% include "components/family-house.html" %}
+        {% include "components/family-lights.html" %}
+        {% include "components/many-stories.html" %}
+        {% include "components/gratitude-wall.html" %}
+
+        {% endif %}
+        {% if chapter.gallery %}
+
+        {% include "components/memory-gallery.html" %}
+
+        {% if chapter.id == "she-saw-what-they-couldnt-see" %}
+        {% include "components/classroom-memory.html" %}
+        {% include "components/belief-transformation.html" %}
+        {% include "components/dream-constellation.html" %}
+        {% include "components/kcse-memory.html" %}
+        {% include "components/mothers-lessons.html" %}
+        {% endif %}
+
+        {% if chapter.paths %}
+
+    <div class="life-paths">
+
+        {% for path in chapter.paths %}
+
+            <div
+                class="life-path life-path-{{ forloop.counter }}"
+                data-reveal
+            >
+
+                <div class="path-symbol">
+                    {{ path.symbol }}
+                </div>
+
+                <h3>
+                    {{ path.name }}
+                </h3>
+
+                <p>
+                    {{ path.description }}
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+
+        <div
+            class="path-connection"
+            data-reveal
+        >
+
+            <span>✦</span>
+
+        </div>
+
+    </div>
+
+{% endif %}
+
+
+        {% if chapter.family %}
+
+    <div
+        class="family-constellation"
+        data-reveal
+    >
+
+        <div class="constellation-center">
+
+            <span>✦</span>
+
+            <p>FAMILY</p>
+
+        </div>
+
+
+        <div class="family-members">
+
+            {% for member in chapter.family %}
+
+                <div class="family-member">
+
+                    <strong>
+                        {{ member.name }}
+                    </strong>
+
+                    <small>
+                        {{ member.role }}
+                    </small>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endif %}
+        {% if chapter.family_members %}
+
+    <script>
+        window.FAMILY_MEMBERS = {
+            {% for member in chapter.family_members %}
+
+                "{{ member.id }}": {
+                    "name": "{{ member.name|escapejs }}",
+                    "role": "{{ member.role|escapejs }}",
+                    "message": "{{ member.message|escapejs }}"
+                }{% if not forloop.last %},{% endif %}
+
+            {% endfor %}
+        };
+    </script>
+
+{% endif %}
+<script
+    src="{% static 'js/family-letters.js' %}"
+></script>
+        {% if chapter.id == "the-people-she-raised" %}
+
+    {% include "components/family-voices.html" %}
+
+    {% include "components/family-letter.html" %}
+
+{% endif %}
+
+        {% if chapter.quote %}
+
+            <blockquote
+                class="chapter-quote"
+                data-reveal
+            >
+                "{{ chapter.quote }}"
+            </blockquote>
+
+        {% endif %}
+
+
+
+        {% if chapter.memories %}
+
+    <div class="memory-grid">
+
+        {% for memory in chapter.memories %}
+
+            <article
+                class="memory-card"
+                data-reveal
+            >
+
+                <span>
+                    {{ forloop.counter|stringformat:"02d" }}
+                </span>
+
+                <h3>
+                    {{ memory.title }}
+                </h3>
+
+                <p>
+                    {{ memory.text }}
+                </p>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+{% endif %}
+
+
+    </div>
+
+</section>

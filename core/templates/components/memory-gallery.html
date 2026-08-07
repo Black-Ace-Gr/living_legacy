@@ -1,0 +1,70 @@
+<section class="memory-gallery">
+
+    <div class="memory-gallery-header">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            The Memory Archive
+        </span>
+
+        <h3 data-reveal>
+            Moments That Stayed
+        </h3>
+
+        <p data-reveal>
+            Some memories fade with time.
+            Others become part of who we are.
+        </p>
+
+    </div>
+
+
+    <div class="memory-gallery-grid">
+
+        {% for memory in chapter.gallery %}
+
+            <article
+                class="memory-photo"
+                data-reveal
+            >
+
+                <div class="memory-image-wrapper">
+
+                    <img
+                        src="{% static memory.image %}"
+                        alt="{{ memory.alt }}"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="memory-caption">
+
+                    {% if memory.year %}
+
+                        <span>
+                            {{ memory.year }}
+                        </span>
+
+                    {% endif %}
+
+                    <h4>
+                        {{ memory.title }}
+                    </h4>
+
+                    <p>
+                        {{ memory.caption }}
+                    </p>
+
+                </div>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>

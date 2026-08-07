@@ -1,0 +1,139 @@
+.hero {
+
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(243, 201, 105, 0.15),
+            transparent 35%
+        ),
+        var(--midnight);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.5s ease;
+
+}
+
+
+.hero-leaving {
+
+    opacity: 0;
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+#opening {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(1.5rem, 3vw, 2.2rem);
+
+    font-style: italic;
+
+    transition:
+        opacity 1.2s ease;
+
+}
+
+
+#title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(4rem, 9vw, 8rem);
+
+    font-weight: 300;
+
+    letter-spacing: 12px;
+
+}
+
+
+.hero-subtitle {
+
+    margin-top: 20px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-style: italic;
+
+    color: var(--gold);
+
+    opacity: 0;
+
+    transition:
+        opacity 1.5s ease;
+
+}
+
+
+.journey-button {
+
+    margin-top: 50px;
+
+    padding: 15px 45px;
+
+    border:
+        1px solid var(--gold);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: var(--gold);
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease,
+        opacity 1s ease;
+
+}
+
+
+.journey-button:hover {
+
+    background: var(--gold);
+
+    color: var(--midnight);
+
+    transform:
+        translateY(-3px);
+
+}

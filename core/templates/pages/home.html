@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Grace | A Life That Became Home
+{% endblock %}
+
+
+{% block extra_css %}
+
+<link
+    rel="stylesheet"
+    href="{% static 'css/hero.css' %}"
+>
+
+<link
+    rel="stylesheet"
+    href="{% static 'css/prologue.css' %}"
+>
+
+<link
+    rel="stylesheet"
+    href="{% static 'css/chapters.css' %}"
+>
+
+{% endblock %}
+
+
+{% block content %}
+
+{% include "components/hero.html" %}
+
+{% include "components/prologue.html" %}
+
+
+<main id="story">
+
+    {% for chapter in chapters %}
+
+        {% include "components/story_chapter.html" with chapter=chapter %}
+
+    {% endfor %}
+
+</main>
+
+
+{% endblock %}
+
+<div
+    class="memory-viewer"
+    id="memoryViewer"
+    aria-hidden="true"
+>
+
+    <button
+        class="memory-viewer-close"
+        id="memoryViewerClose"
+        type="button"
+        aria-label="Close memory"
+    >
+        ×
+    </button>
+
+
+    <div class="memory-viewer-content">
+
+        <img
+            id="memoryViewerImage"
+            src=""
+            alt=""
+        >
+
+
+        <div class="memory-viewer-caption">
+
+            <span id="memoryViewerYear"></span>
+
+            <h3 id="memoryViewerTitle"></h3>
+
+            <p id="memoryViewerText"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% block scripts %}
+
+<script src="{% static 'js/hero.js' %}"></script>
+
+<script src="{% static 'js/chapters.js' %}"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/memory-viewer.js' %}"></script>
+
+{% endblock %}

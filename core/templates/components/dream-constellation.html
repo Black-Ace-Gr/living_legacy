@@ -1,0 +1,46 @@
+<section class="dream-constellation">
+
+    <div class="dream-header">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            The Dreams She Helped Create
+        </span>
+
+        <h3 data-reveal>
+            What if I could?
+        </h3>
+
+    </div>
+
+
+    <div class="dreams">
+
+        {% for dream in chapter.dreams %}
+
+            <article
+                class="dream"
+                data-reveal
+            >
+
+                <div class="dream-star">
+                    ✦
+                </div>
+
+                <h4>
+                    {{ dream.title }}
+                </h4>
+
+                <p>
+                    {{ dream.text }}
+                </p>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>

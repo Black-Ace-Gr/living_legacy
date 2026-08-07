@@ -1,0 +1,72 @@
+<section class="kcse-memory">
+
+    <div
+        class="kcse-header"
+        data-reveal
+    >
+
+        <span class="chapter-eyebrow">
+            Another Lesson
+        </span>
+
+        <h3>
+            The Grade I Thought Wasn't Enough
+        </h3>
+
+    </div>
+
+
+    <div
+        class="result-card"
+        data-reveal
+    >
+
+        <div class="result-expectation">
+
+            <small>
+                EXPECTED
+            </small>
+
+            <strong>
+                {{ chapter.result.expected }}
+            </strong>
+
+        </div>
+
+
+        <div class="result-divider">
+            →
+        </div>
+
+
+        <div class="result-reality">
+
+            <small>
+                RECEIVED
+            </small>
+
+            <strong>
+                {{ chapter.result.received }}
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <p
+        class="result-lesson"
+        data-reveal
+    >
+        {{ chapter.result.lesson }}
+    </p>
+
+
+    <blockquote
+        class="result-memory"
+        data-reveal
+    >
+        "{{ chapter.result.memory }}"
+    </blockquote>
+
+</section>
