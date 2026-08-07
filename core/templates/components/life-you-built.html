@@ -1,0 +1,58 @@
+<section class="life-you-built">
+
+    <div class="life-intro">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            The Final Chapter
+        </span>
+
+        <h3 data-reveal>
+            The Life You Built
+        </h3>
+
+    </div>
+
+
+    <div class="legacy-timeline">
+
+        {% for item in chapter.legacy %}
+
+            <div
+                class="legacy-item"
+                data-reveal
+            >
+
+                <div class="legacy-number">
+                    {{ forloop.counter|stringformat:"02d" }}
+                </div>
+
+                <p>
+                    {{ item }}
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div
+        class="legacy-ending"
+        data-reveal
+    >
+
+        <p>
+            You didn't simply raise a family.
+        </p>
+
+        <strong>
+            You gave people somewhere to belong.
+        </strong>
+
+    </div>
+
+</section>

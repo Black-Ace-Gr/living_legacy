@@ -1,86 +1,80 @@
-<div class="chapter-transition">
+{% load static %}
 
-    <span></span>
+<div class="chapter-inner">
 
-    <p>
+```
+{% if chapter.eyebrow %}
+    <span class="chapter-eyebrow">
         {{ chapter.eyebrow }}
-    </p>
+    </span>
+{% endif %}
 
-    <span></span>
+
+{% if chapter.title %}
+    <h2 class="chapter-title">
+        {{ chapter.title }}
+    </h2>
+{% endif %}
+
+
+{% if chapter.location %}
+    <p class="chapter-location">
+        {{ chapter.location }}
+    </p>
+{% endif %}
+
+
+<div class="chapter-narration">
+
+    {% for paragraph in chapter.narration %}
+
+        <p
+            class="chapter-paragraph"
+            data-reveal
+        >
+            {{ paragraph }}
+        </p>
+
+    {% endfor %}
 
 </div>
 
-<section
-    class="story-chapter"
-    id="chapter-{{ chapter.id }}"
-    data-chapter="{{ chapter.id }}"
->
 
-    <div class="chapter-inner">
+{% if chapter.id == "the-house-they-built" %}
 
+    {% include "components/family-house.html" %}
+    {% include "components/family-lights.html" %}
+    {% include "components/many-stories.html" %}
+    {% include "components/gratitude-wall.html" %}
 
-        {% if chapter.eyebrow %}
-
-            <span class="chapter-eyebrow">
-                {{ chapter.eyebrow }}
-            </span>
-
-        {% endif %}
+{% endif %}
 
 
-        {% if chapter.title %}
-
-            <h2 class="chapter-title">
-                {{ chapter.title }}
-            </h2>
-
-        {% endif %}
 
 
-        {% if chapter.location %}
+{% if chapter.gallery %}
 
-            <p class="chapter-location">
-                {{ chapter.location }}
-            </p>
+    {% include "components/memory-gallery.html" %}
 
-        {% endif %}
+{% endif %}
 
 
-        <div class="chapter-narration">
 
-            {% for paragraph in chapter.narration %}
 
-                <p
-                    class="chapter-paragraph"
-                    data-reveal
-                >
-                    {{ paragraph }}
-                </p>
+{% if chapter.id == "she-saw-what-they-couldnt-see" %}
 
-            {% endfor %}
+    {% include "components/classroom-memory.html" %}
+    {% include "components/belief-transformation.html" %}
+    {% include "components/dream-constellation.html" %}
+    {% include "components/kcse-memory.html" %}
+    {% include "components/mothers-lessons.html" %}
 
-        </div>
-        {% if chapter.id == "the-house-they-built" %}
+{% endif %}
 
-        {% include "components/family-house.html" %}
-        {% include "components/family-lights.html" %}
-        {% include "components/many-stories.html" %}
-        {% include "components/gratitude-wall.html" %}
 
-        {% endif %}
-        {% if chapter.gallery %}
 
-        {% include "components/memory-gallery.html" %}
 
-        {% if chapter.id == "she-saw-what-they-couldnt-see" %}
-        {% include "components/classroom-memory.html" %}
-        {% include "components/belief-transformation.html" %}
-        {% include "components/dream-constellation.html" %}
-        {% include "components/kcse-memory.html" %}
-        {% include "components/mothers-lessons.html" %}
-        {% endif %}
-
-        {% if chapter.paths %}
+{% if chapter.paths %}
 
     <div class="life-paths">
 
@@ -122,7 +116,9 @@
 {% endif %}
 
 
-        {% if chapter.family %}
+
+
+{% if chapter.family %}
 
     <div
         class="family-constellation"
@@ -161,48 +157,67 @@
     </div>
 
 {% endif %}
-        {% if chapter.family_members %}
+
+
+
+
+{% if chapter.family_members %}
 
     <script>
+
         window.FAMILY_MEMBERS = {
+
             {% for member in chapter.family_members %}
 
                 "{{ member.id }}": {
-                    "name": "{{ member.name|escapejs }}",
-                    "role": "{{ member.role|escapejs }}",
-                    "message": "{{ member.message|escapejs }}"
+
+                    "name":
+                        "{{ member.name|escapejs }}",
+
+                    "role":
+                        "{{ member.role|escapejs }}",
+
+                    "message":
+                        "{{ member.message|escapejs }}"
+
                 }{% if not forloop.last %},{% endif %}
 
             {% endfor %}
+
         };
+
     </script>
 
 {% endif %}
-<script
-    src="{% static 'js/family-letters.js' %}"
-></script>
-        {% if chapter.id == "the-people-she-raised" %}
+
+
+
+
+{% if chapter.id == "the-people-she-raised" %}
 
     {% include "components/family-voices.html" %}
-
     {% include "components/family-letter.html" %}
 
 {% endif %}
 
-        {% if chapter.quote %}
-
-            <blockquote
-                class="chapter-quote"
-                data-reveal
-            >
-                "{{ chapter.quote }}"
-            </blockquote>
-
-        {% endif %}
 
 
 
-        {% if chapter.memories %}
+{% if chapter.quote %}
+
+    <blockquote
+        class="chapter-quote"
+        data-reveal
+    >
+        "{{ chapter.quote }}"
+    </blockquote>
+
+{% endif %}
+
+
+
+
+{% if chapter.memories %}
 
     <div class="memory-grid">
 
@@ -234,6 +249,81 @@
 {% endif %}
 
 
-    </div>
 
-</section>
+
+{% if chapter.id == "four-voices-one-thank-you" %}
+
+    {% include "components/four-voices.html" %}
+    {% include "components/family-thank-you.html" %}
+
+{% endif %}
+
+
+
+
+{% if chapter.id == "the-life-you-built" %}
+
+    {% include "components/life-you-built.html" %}
+
+{% endif %}
+
+
+
+
+{% if chapter.id == "the-man-who-taught-me-to-build" %}
+
+    {% include "components/dad-story.html" %}
+    {% include "components/parents-to-greg.html" %}
+
+{% endif %}
+
+
+
+
+{% if chapter.id == "mfangano" %}
+
+    {% include "components/mfangano.html" %}
+
+{% endif %}
+
+
+
+
+{% if chapter.id == "mama-watu-wengi" %}
+
+    {% include "components/mama-watu-wengi.html" %}
+
+{% endif %}
+
+
+
+
+{% if chapter.id == "forty-seven" %}
+
+    {% include "components/birthday-reveal.html" %}
+    {% include "components/final-scene.html" %}
+
+{% endif %}
+
+
+
+
+<div class="keepsake">
+
+    <button
+        onclick="window.print()"
+        class="keepsake-button"
+    >
+        Keep This Memory
+    </button>
+
+    <p>
+        A little piece of this day,
+        kept forever.
+    </p>
+
+</div>
+```
+
+</div>
+

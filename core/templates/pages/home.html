@@ -61,6 +61,24 @@ Grace | A Life That Became Home
     >
         ×
     </button>
+    <audio
+    id="storyMusic"
+    loop
+    preload="auto"
+>
+    <source
+        src="{% static 'audio/story.mp3' %}"
+        type="audio/mpeg"
+    >
+</audio>
+
+<button
+    id="musicToggle"
+    class="music-toggle"
+    aria-label="Toggle music"
+>
+    ♪
+</button>
 
 
     <div class="memory-viewer-content">
@@ -94,5 +112,7 @@ Grace | A Life That Became Home
 
 <script src="{% static 'js/main.js' %}"></script>
 <script src="{% static 'js/memory-viewer.js' %}"></script>
+<script src="{% static 'js/family-letters.js' %}"></script>
+<script src="{% static 'js/intro.js' %}"></script>
 
 {% endblock %}

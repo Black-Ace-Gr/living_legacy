@@ -164,3 +164,33 @@ button {
     letter-spacing: 2px;
 
 }
+.music-toggle {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 3000;
+
+    width: 45px;
+
+    height: 45px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.35);
+
+    border-radius: 50%;
+
+    background:
+        rgba(3,8,13,.7);
+
+    color: var(--gold);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+}

@@ -369,41 +369,294 @@ CHAPTERS = [
 
     "family_members": [
 
-        {
-            "id": "whytney",
-            "name": "Whytney",
-            "role": "Big Sister",
-            "image": "images/family/whytney.jpg",
-            "message": ""
-        },
+    {
+        "id": "whytney",
+        "name": "Whytney",
+        "role": "Big Sister",
+        "image": "images/family/whytney.jpg",
+        "message": """
+            <p>
+                Mum, there are so many things I could say, but I think
+                one of the biggest things you've given us is the feeling
+                that we always have somewhere to turn.
+            </p>
 
-        {
-            "id": "dylan",
-            "name": "Dylan",
-            "role": "Big Brother",
-            "image": "images/family/dylan.jpg",
-            "message": ""
-        },
+            <p>
+                You've loved us through different seasons of our lives,
+                celebrated our victories, corrected us when we needed it,
+                and somehow always found a way to remind us that family
+                comes first.
+            </p>
 
-        {
-            "id": "mitchell",
-            "name": "Mitchell",
-            "role": "Daughter",
-            "image": "images/family/mitchell.jpg",
-            "message": ""
-        },
+            <p>
+                Thank you for everything you've done for us, including
+                the things we may never fully understand or appreciate.
+                We are incredibly lucky to call you Mum.
+            </p>
+        """
+    },
 
-        {
-            "id": "greg",
-            "name": "Greg",
-            "role": "Youngest",
-            "image": "images/family/greg.jpg",
-            "message": ""
-        }
 
-    ],
+    {
+        "id": "dylan",
+        "name": "Dylan",
+        "role": "Big Brother",
+        "image": "images/family/dylan.jpg",
+        "message": """
+            <p>
+                Mum, growing up with you taught me that strength doesn't
+                always have to be loud. Sometimes it looks like waking
+                up every day, carrying responsibility, and still finding
+                enough love to give everyone around you.
+            </p>
+
+            <p>
+                I have watched you sacrifice, work hard, encourage us,
+                and somehow continue showing up for the people who need
+                you.
+            </p>
+
+            <p>
+                Thank you for being the kind of mother whose presence
+                makes a house feel like home. I hope you know how proud
+                we are of you.
+            </p>
+        """
+    },
+
+
+    {
+        "id": "mitchell",
+        "name": "Mitchell",
+        "role": "Daughter",
+        "image": "images/family/mitchell.jpg",
+        "message": """
+            <p>
+                Mum, you've taught me so many things without necessarily
+                sitting down to teach them. I learned from watching how
+                you treat people, how you handle difficult moments, and
+                how you continue caring even when life gets demanding.
+            </p>
+
+            <p>
+                You have always wanted the best for us, and your
+                encouragement has been one of the quiet forces behind
+                many of the things we have achieved.
+            </p>
+
+            <p>
+                Thank you for being our mother, our adviser, our
+                disciplinarian, and sometimes simply the person we come
+                home to when we need someone.
+            </p>
+        """
+    },
+
+
+    {
+        "id": "greg",
+        "name": "Greg",
+        "role": "Youngest",
+        "image": "images/family/greg.png",
+        "message": """
+            <p>
+                Mum, I don't think I have enough words to explain what
+                your belief in me has meant throughout my life.
+            </p>
+
+            <p>
+                You believed in me when some people didn't. You pushed
+                me when I needed pushing, corrected me when I needed
+                correction, and celebrated me even when I was busy
+                focusing on what I thought I had not achieved.
+            </p>
+
+            <p>
+                From the little boy you encouraged in primary school to
+                the person now chasing dreams in technology and
+                engineering, I carry pieces of your voice with me.
+            </p>
+
+            <p>
+                Thank you for seeing the best in me before I knew how to
+                see it myself. I hope the life I build will always give
+                you reasons to smile.
+            </p>
+        """
+    },
+
+{
+        "id": "hawi",
+        "name": "Hawi",
+        "role": "Grand Daughter",
+        "image": "images/family/hawi.jpg",
+        "message": """
+            <p>
+                Mum, I don't think I have enough words to explain what
+                your belief in me has meant throughout my life.
+            </p>
+
+            <p>
+                You believed in me when some people didn't. You pushed
+                me when I needed pushing, corrected me when I needed
+                correction, and celebrated me even when I was busy
+                focusing on what I thought I had not achieved.
+            </p>
+
+            <p>
+                From the little boy you encouraged in primary school to
+                the person now chasing dreams in technology and
+                engineering, I carry pieces of your voice with me.
+            </p>
+
+            <p>
+                Thank you for seeing the best in me before I knew how to
+                see it myself. I hope the life I build will always give
+                you reasons to smile.
+            </p>
+        """
+    },
+],
 
     "quote": "Many lives. One woman behind them all."
 },
+{
+    "id": "four-voices-one-thank-you",
+
+    "eyebrow": "Chapter Ten",
+
+    "title": "Four Voices, One Thank You",
+
+    "location": "From Your Children",
+
+    "narration": [
+        "We grew up differently.",
+        "We became different people.",
+        "We have different memories, different personalities, and different dreams.",
+        "But there is one thing we all share.",
+        "We know what it means to be your children.",
+        "And today, we want you to hear what that means to us."
+    ],
+
+    "family_names": [
+        "Whytney",
+        "Dylan",
+        "Mitchell",
+        "Greg"
+
+    ],
+
+    "message": [
+        "Thank you for every sacrifice that nobody saw.",
+        "Thank you for every correction that made us better.",
+        "Thank you for every conversation that gave us perspective.",
+        "Thank you for celebrating our victories as though they were your own.",
+        "Thank you for believing in us before we knew how to believe in ourselves.",
+        "And most importantly, thank you for giving us a place we can always call home."
+    ]
+},
+{
+    "id": "the-life-you-built",
+
+    "eyebrow": "The Final Chapter",
+
+    "title": "The Life You Built",
+
+    "location": "A Legacy In Motion",
+
+    "narration": [
+        "You began with little.",
+        "You carried responsibilities that were never easy.",
+        "You worked.",
+        "You sacrificed.",
+        "You became a wife.",
+        "You became a mother.",
+        "You became a leader.",
+        "You became someone people came looking for when they needed hope.",
+        "And somewhere along the way, you built something far greater than a career or a home.",
+        "You built people."
+    ],
+
+    "legacy": [
+        "A family that loves you.",
+        "Children who carry your lessons.",
+        "People who remember your kindness.",
+        "A home where others feel welcome.",
+        "A life that became an example."
+    ]
+},
+{
+    "id": "forty-seven",
+
+    "eyebrow": "August 11, 2026",
+
+    "title": "47",
+
+    "location": "Years of Grace",
+
+    "roles": [
+        "Daughter",
+        "Wife",
+        "Mother",
+        "Leader",
+        "Mentor",
+        "Friend",
+        "Home"
+    ]
+},
+{
+    "id": "the-man-who-taught-me-to-build",
+
+    "eyebrow": "Chapter Four",
+
+    "title": "The Man Who Taught Me to Build",
+
+    "location": "Peter · Husband · Father · Mentor",
+
+    "narration": [
+        "Behind every great chapter of Mum's story was someone who stood beside her.",
+        "His name is Peter.",
+        "When life was difficult, he remained a pillar.",
+        "He encouraged her to keep going.",
+        "He provided for the family.",
+        "And while Mum taught us how to believe in ourselves, Dad taught us how to look at the world with curiosity.",
+        "Especially the engineer in me."
+    ],
+
+    "story": [
+        {
+            "title": "The Man Behind The Strength",
+            "text": "Dad was there for Mum when life was difficult. He encouraged her, supported her dreams, and remained a strong pillar for the family."
+        },
+
+        {
+            "title": "The Dad We Knew At Home",
+            "text": "Outside the house, he is a senior police officer. A serious man. A no-nonsense man. Someone people respect. But at home, he is simply Dad."
+        },
+
+        {
+            "title": "The Little Things",
+            "text": "I remember mending fences with him, going to the farm, grazing, building things and learning the basic things a man should know. Those moments seemed ordinary then. Looking back, they were lessons."
+        },
+
+        {
+            "title": "Where Curiosity Began",
+            "text": "Dad always seemed to find a way to make me curious. He would create, repair, improvise and find solutions. Watching him made me want to understand how things worked."
+        },
+
+        {
+            "title": "The Engineer In Me",
+            "text": "Long before I knew what engineering really meant, I already knew I wanted to build things. That curiosity eventually became part of the reason I chose engineering."
+        }
+    ],
+
+    "closing": {
+        "small": "Some lessons are never written down.",
+        "large": "They are built into you."
+    }
+},
+    {
+"id": "mfangano",
+    }
 
 ]

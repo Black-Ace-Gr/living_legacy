@@ -1,0 +1,83 @@
+<section class="dad-story">
+
+    <div class="dad-story-intro">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            Chapter Four
+        </span>
+
+        <h3 data-reveal>
+            The Man Who
+            <br>
+            Taught Me to Build
+        </h3>
+
+        <p data-reveal>
+            Peter · Husband · Father · Mentor
+        </p>
+
+    </div>
+
+
+    <div class="dad-story-opening">
+
+        <p data-reveal>
+            Behind every great chapter of Mum's story
+            was someone who stood beside her.
+        </p>
+
+        <strong data-reveal>
+            His name is Peter.
+        </strong>
+
+    </div>
+
+
+    <div class="dad-story-sections">
+
+        {% for section in chapter.story %}
+
+            <article
+                class="dad-story-section"
+                data-reveal
+            >
+
+                <span class="dad-story-number">
+                    {{ forloop.counter|stringformat:"02d" }}
+                </span>
+
+                <div class="dad-story-copy">
+
+                    <h4>
+                        {{ section.title }}
+                    </h4>
+
+                    <p>
+                        {{ section.text }}
+                    </p>
+
+                </div>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="dad-story-closing">
+
+        <p data-reveal>
+            {{ chapter.closing.small }}
+        </p>
+
+        <strong data-reveal>
+            {{ chapter.closing.large }}
+        </strong>
+
+    </div>
+
+</section>

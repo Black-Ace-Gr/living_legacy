@@ -1,0 +1,48 @@
+<section class="family-thank-you">
+
+    <div class="family-thank-you-inner">
+
+        <span
+            class="chapter-eyebrow"
+            data-reveal
+        >
+            And From All Of Us
+        </span>
+
+
+        <h3 data-reveal>
+            Mum,
+        </h3>
+
+
+        <div class="family-message">
+
+            {% for message in chapter.message %}
+
+                <p data-reveal>
+                    {{ message }}
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+
+        <div
+            class="family-message-ending"
+            data-reveal
+        >
+
+            <span>
+                With all our love,
+            </span>
+
+            <strong>
+                Whytney · Dylan · Mitchell · Greg
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,59 @@
+<section class="birthday-reveal">
+
+    <div
+        class="birthday-date"
+        data-reveal
+    >
+        11 · 08 · 2026
+    </div>
+
+
+    <div
+        class="birthday-number"
+        data-reveal
+    >
+        47
+    </div>
+
+
+    <div
+        class="birthday-title"
+        data-reveal
+    >
+        Years of Grace.
+    </div>
+
+
+    <div class="birthday-roles">
+
+        {% for role in chapter.roles %}
+
+            <span data-reveal>
+                {{ role }}
+            </span>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div
+        class="birthday-final"
+        data-reveal
+    >
+
+        <p>
+            Happy Birthday,
+        </p>
+
+        <h3>
+            Mum.
+        </h3>
+
+        <span>
+            ❤️
+        </span>
+
+    </div>
+
+</section>
